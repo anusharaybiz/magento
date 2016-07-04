@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Admlc_Rbtpl>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Admlc_Rbtpl>
+    </modules>
+</config>

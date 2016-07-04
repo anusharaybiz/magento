@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Admlc_Rbtpl>
+            <version>0.1.0</version>    
+        </Admlc_Rbtpl>
+    </modules>
+    <frontend>
+        <routers>
+            <rbtpl>
+                <use>standard</use>
+                <args>
+                    <module>Admlc_Rbtpl</module>
+                    <frontName>rbtpl</frontName>
+                </args>
+            </rbtpl>
+        </routers>
+    </frontend>
+</config>

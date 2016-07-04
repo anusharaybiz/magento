@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+    <default>
+        <reference name="footer_links">
+            <action method="addLink" name="registerForm" translate="label title" module="rbtpl" ifconfig="contacts/contacts/enabled"><label>Registration</label><url>contacts</url><title>Contact Us</title><prepare>true</prepare></action>
+        </reference>
+    </default>
+
+    <rbtpl_index_index translate="label">
+        <label>Registration Form</label>
+        <reference name="head">
+            <action method="setTitle" translate="title" module="rbtpl"><title>Registration</title></action>
+        </reference>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+            <action method="setHeaderTitle" translate="title" module="rbtpl"><title>Registration</title></action>
+        </reference>
+        <reference name="content">
+            <block type="core/template" name="registerForm" template="rbtpl/form.phtml"/>
+        </reference>
+    </rbtpl_index_index>
+</layout>
