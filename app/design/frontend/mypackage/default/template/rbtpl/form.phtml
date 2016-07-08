@@ -1,5 +1,4 @@
 <?php
-exit();
 /**
  * Magento
  *
@@ -26,10 +25,45 @@ exit();
  */
 ?>
 
-<form action="#" id="registrationForm" method="post" class="scaffold-form">
-    <input name="name" id="name" title="Name" value="" class="input-text required-entry" type="text" />
-     <input name="email" id="email" title="Email" value="" class="input-text required-entry validate-email" type="email" autocapitalize="off" autocorrect="off" spellcheck="false" />
-     <input name="telephone" id="telephone" title="Telephone" value="" class="input-text" type="tel" />
-     <textarea name="comment" id="comment" title="Comment" class="required-entry input-text" cols="5" rows="3"></textarea>
-     <button type="submit" title="Submit" class="button">Submit</button>
+<form action="http://localhost/magento/index.php/register/index/post" name="registrationForm" id="registrationForm" method="post" class="scaffold-form">
+<div class="fieldset">
+
+        <h2 class="legend">Registration Form</h2>
+        <p class="required"> Required Fields</p>
+        <ul class="form-list">
+            <li class="fields">
+                <div class="field">
+                    <label for="name" class="required"><em>*</em>Name</label>
+                    <div class="input-box">
+                        <input name="name" id="name" title="Name" value="" class="input-text required-entry" type="text" />
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="email" class="required"><em>*</em>Email</label>
+                    <div class="input-box">
+                        <input name="email" id="email" title="Email" value="" class="input-text required-entry validate-email" type="email" />
+                    </div>
+                </div>
+            </li>
+            <li>
+                <label for="telephone">Telephone</label>
+                <div class="input-box">
+                    <input name="telephone" id="telephone" title="Telephone" value="" class="input-text" type="tel" />
+                </div>
+            </li>
+            <li class="wide">
+                <label for="comment" class="required"><em>*</em>Comment</label>
+                <div class="input-box">
+                    <textarea name="comment" id="comment" title="Comment" class="required-entry input-text" cols="5" rows="3"></textarea>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="buttons-set">
+        <input type="text" name="hideit" id="hideit" value="" style="display:none !important;" />
+        <button type="submit" title="Submit" class="button"><span><span>Submit</span></span></button>
+    </div>
+    
     </form>
+    
+    

@@ -1,0 +1,14 @@
+<h1>New Users</h1>
+<table>
+
+<th style="border: 1px solid">Name</th>
+<th style="border: 1px solid">Email</th>
+<?php 
+$users  = Mage::getSingleton('core/session')->getUserDetails();
+
+foreach ($users as $user){?>
+  <tr style="border: 1px solid"><td style="border: 1px solid"><?php echo $user['Name'] ?></td><td><?php echo $user['Email'] ?></td></tr>
+
+	
+<?php } ?>
+</table>

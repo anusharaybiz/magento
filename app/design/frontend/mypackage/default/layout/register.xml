@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <register_index_index translate="label">
+       <reference name="content">		   
+			<block type="core/template" name="rbtplform" template="rbtpl/form.phtml" />
+        </reference>
+    </register_index_index>
+    
+    <register_index_users translate="label">
+       <reference name="content">		   
+			<block type="core/template" name="rbtplform" template="rbtpl/list.phtml" />
+        </reference>
+    </register_index_users>
+</layout>

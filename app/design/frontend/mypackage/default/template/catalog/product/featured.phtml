@@ -1,0 +1,32 @@
+<?php 
+$cat_id = "11"; 
+$_productCollection = Mage::getResourceModel('catalog/product_collection')
+->addAttributeToSelect(array('name', 'price', 'small_image', 'short_description'), 'inner')
+->addCategoryFilter(Mage::getModel('catalog/category')->load($cat_id));
+ 
+if(!$_productCollection->count()): 
+    echo $this->__('There are no products matching the selection.'); 
+else: ?>
+ 
+    <div id="home-slideshow">
+        <?php $i=0; foreach ($_productCollection as $_product): ?>
+ 
+        <div class="slide">
+ 
+            <div class="product-image">
+                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>">
+                <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(650, 250); ?>" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" /></a>
+            </div>
+ 
+            <div class="product-details">
+                <h2><?php echo $_product->getName(); ?></h2>
+                <div class="price"><?php echo number_format($_product->getFinalPrice(),2);?> </div>
+                <p><?php echo $_product->getShortDescription(); ?></p>
+            </div>
+ 
+        </div>
+        <?php endforeach ?>
+ 
+    </div>
+ 
+<?php endif; ?>
